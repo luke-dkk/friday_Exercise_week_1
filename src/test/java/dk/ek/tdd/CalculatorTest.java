@@ -68,4 +68,12 @@ class CalculatorTest {
         assertEquals(expected,actual);
         //test
     }
+    @Test
+    @DisplayName("Test calculator: Addition - String")
+    void additionpart2(){
+        int actual = calculator.addition("1,2,3");
+        int expected = 6;
+        assertEquals(expected,actual);
+    }
+
 }

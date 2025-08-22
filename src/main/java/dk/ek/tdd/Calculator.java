@@ -1,5 +1,7 @@
 package dk.ek.tdd;
 
+import java.util.ArrayList;
+
 public class Calculator {
     public static void main(String[] args) {
 
@@ -7,6 +9,16 @@ public class Calculator {
 
     public int addition(int a, int b) {
         return a+b;
+    }
+    public int addition(String number){
+        String[] stringToNumber = number.split(",");
+        int result = 0;
+        for (String toNumber : stringToNumber) {
+            int nr = Integer.parseInt(toNumber);
+            result += nr;
+        }
+
+        return result;
     }
 
     public int subtraction(int i, int i1) {
